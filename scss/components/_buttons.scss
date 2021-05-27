@@ -1,0 +1,72 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+// .btn {
+//     border: solid $alert-border-radius purple;
+// }
+
+// .btn-rounded {
+//     position: relative;
+//     padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
+//     font-weight: 700;
+//     margin: 0;
+//     border: 0.1rem solid rgba($white, 0.6);
+//     background-color: $white;
+//     display: block;
+
+//     span {
+//         position: absolute;
+//         background-color: $primary;
+//         width: 2.5rem;
+//         height: 2.5rem;
+//         top: 50%;
+//         right: 5px;
+//         transform: translateY(-50%);
+//         border-radius: 50%;
+
+//         i {
+//             color: $white;
+//             font-size: 1rem;
+//             line-height: 2.5rem;
+//         }
+
+//     }
+
+//     &:hover {
+//         @include gradient;
+//         color: $white;
+
+//         span {
+//             background-color: rgba($black, 0.6);
+//         }
+//     }
+// }
+
+
+@mixin button-variant-custom($background, $border, $hover-color, $color) {
+    // background-color: $btn-background;
+    // border: 2px solid $btn-border;    
+    border-color: $border;
+    color: $color;
+
+    &:hover {
+        // border: 2px solid $btn-background;
+        background-color: $hover-color;
+        border-color: $hover-color;
+        color: $color;
+    }
+}
+
+
+@each $color, $value in $theme-colors {
+    .btn-#{$color} {
+        
+        @debug "color";
+
+        $hover-color: theme-active-color($color);        
+        //$hover-color: red;
+        
+        @include button-variant-custom($value, $value, $hover-color, white);      
+    }
+}
+

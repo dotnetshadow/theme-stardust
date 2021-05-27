@@ -1,0 +1,165 @@
+// Colors
+$neutrals-granite: rgba(161, 152, 150, 1);
+$neutrals-stone: rgba(219, 208, 201, 1);
+$neutrals-pebble: rgba(239, 235, 229, 1);
+$neutrals-paper: rgba(249, 246, 242, 1);
+$neutrals-white: rgba(255, 255, 255, 1);
+$grey-darker: rgba(43, 45, 55, 1);
+$grey-dark: rgba(77, 82, 102, 1);
+$grey-grey: rgba(116, 119, 133, 1);
+$grey-light: rgba(169, 173, 190, 1);
+$grey-lighter: rgba(211, 214, 222, 1);
+$grey-lightest: rgba(244, 246, 249, 1);
+$blue-darker: rgba(38, 75, 148, 1);
+$blue-dark: rgba(63, 114, 190, 1);
+$blue-blue: rgba(65, 150, 235, 1);
+$blue-light: rgba(123, 175, 231, 1);
+$blue-lighter: rgba(194, 219, 244, 1);
+$blue-lightest: rgba(230, 242, 253, 1);
+$teal-darker: rgba(33, 82, 77, 1);
+$teal-dark: rgba(53, 123, 120, 1);
+$teal-teal: rgba(75, 162, 162, 1);
+$teal-light: rgba(150, 216, 216, 1);
+$teal-lighter: rgba(223, 238, 239, 1);
+$pink-darker: rgba(109, 28, 75, 1);
+$pink-dark: rgba(162, 43, 91, 1);
+$pink-pink: rgba(228, 100, 149, 1);
+$pink-light: rgba(240, 157, 193, 1);
+$pink-lighter: rgba(245, 228, 236, 1);
+$red-darker: rgba(128, 2, 2, 1);
+$red-dark: rgba(166, 26, 26, 1);
+$red-red: rgba(231, 71, 71, 1);
+$red-light: rgba(210, 117, 114, 1);
+$red-lighter: rgba(246, 205, 209, 1);
+$red-lightest: rgba(246, 225, 227, 1);
+$purple-darker: rgba(53, 33, 82, 1);
+$purple-dark: rgba(87, 51, 108, 1);
+$purple-purple: rgba(145, 76, 155, 1);
+$purple-light: rgba(179, 149, 187, 1);
+$purple-lighter: rgba(236, 229, 237, 1);
+$indigo-darker: rgba(48, 42, 120, 1);
+$indigo-dark: rgba(65, 63, 155, 1);
+$indigo-indigo: rgba(77, 92, 182, 1);
+$indigo-light: rgba(131, 144, 199, 1);
+$indigo-lighter: rgba(201, 206, 232, 1);
+$green-darker: rgba(17, 106, 45, 1);
+$green-dark: rgba(16, 139, 78, 1);
+$green-green: rgba(46, 169, 108, 1);
+$green-light: rgba(172, 221, 162, 1);
+$green-lighter: rgba(217, 237, 213, 1);
+$orange-darker: rgba(167, 67, 21, 1);
+$orange-dark: rgba(194, 94, 48, 1);
+$orange-orange: rgba(222, 122, 76, 1);
+$orange-light: rgba(242, 173, 140, 1);
+$orange-lighter: rgba(242, 220, 210, 1);
+$yellow-darker: rgba(174, 119, 30, 1);
+$yellow-dark: rgba(218, 163, 14, 1);
+$yellow-yellow: rgba(249, 194, 45, 1);
+$yellow-light: rgba(251, 213, 91, 1);
+$yellow-lighter: rgba(253, 236, 183, 1);
+
+
+// $color-contrast-dark:      #2B2D37 !default; 
+
+// $min-contrast-ratio: 4.5;
+$font-family-base: 'Poppins', sans-serif;
+$btn-font-weight: 500 !default;
+
+// $btn-hover-bg-shade-amount:       -25% !default;
+// $btn-hover-bg-tint-amount:        -25% !default;
+// $btn-hover-border-shade-amount:   20% !default;
+// $btn-hover-border-tint-amount:    10% !default;
+// $btn-active-bg-shade-amount:      20% !default;
+// $btn-active-bg-tint-amount:       20% !default;
+// $btn-active-border-shade-amount:  25% !default;
+// $btn-active-border-tint-amount:   10% !default;
+
+
+
+// Theme colors
+$primary: $blue-blue !default;
+$secondary: $pink-pink !default;
+$success: $green-green !default;
+$dark: $grey-dark !default;
+$danger: $red-red !default;
+$footer: #151414 !default;
+
+// .btn { color:#fff !important; padding: 1rem !important; line-height: 1rem !important; }
+
+// $theme-colors: (
+//   "primary":    $primary,
+//   "secondary":  $secondary,
+//   "success":    $success,
+//   "info":       $primary,
+//   "warning":    $primary,
+//   "danger":     $danger,
+//   "light":      $primary,
+//   "dark":       $dark
+// ) !default;
+
+// Hover colors
+$primary-active: $blue-dark !default;
+$secondary-active: $pink-dark !default;
+$sucess-active: $green-dark !default;
+$dark-active: $grey-darker !default;
+$danger-active: $red-dark !default;
+
+
+$theme-active-colors: (
+	"white":      $primary-active,   // custom color type
+	"primary":    $primary-active,
+    "secondary":  $secondary-active,
+    "light":      $primary-active,
+    "success":    $sucess-active,
+    "info":       $primary-active,
+    "warning":    $primary-active,
+    "danger":     $danger-active,
+    "dark":       $dark-active
+) !default;  // Custom variable
+
+@function theme-active-color($key: "primary") {
+    @return map-get($theme-active-colors, $key);
+}
+
+
+// $blue-dark: #264b94;
+// $blue-dark: purple;
+// $blue-light: #3f72be;
+
+
+
+// MY THEME COLORS 
+// $purple-dark:  #9926f0;
+// $purple-light:  #BB6EF5;
+// $pink:    #d122e3;
+// $footer: #151414;
+
+
+// // WHITE AND GRAY COLORS 
+// $white:    #fff;
+// $gray-100: #f8f9fa;
+// $gray-200: #e9ecef;
+// $gray-300: #dee2e6;
+// $gray-400: #ced4da;
+// $gray-500: #adb5bd;
+// $gray-600: #6c757d;
+// $gray-700: #495057;
+// $gray-800: #343a40;
+// $gray-900: #212529;
+// $black:    #000;
+
+
+// $primary:       $blue-dark;
+// $secondary:     $blue-light;
+
+// // ACCORDION OVERRIDES
+// $accordion-padding-y:                     1.5rem;
+// $accordion-padding-x:                     1.5rem;
+// $accordion-icon-color:                    $primary;
+// $accordion-icon-active-color:           $secondary;
+// $accordion-icon-width:                    1.875rem;
+// $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/> <path d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/></svg>");
+// $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$accordion-icon-active-color}'><path fill-rule='evenodd' d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z'/>  <path d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/></svg>");
+
+// // IMPORT BOOTSTRAP 
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
