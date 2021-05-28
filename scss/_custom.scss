@@ -78,41 +78,51 @@ $btn-font-weight: 500 !default;
 
 // Theme colors
 $primary: $blue-blue !default;
+$primary-dark: $blue-darker !default;
 $secondary: $pink-pink !default;
-$success: $green-green !default;
 $dark: $grey-dark !default;
 $danger: $red-red !default;
+$info: $teal-teal !default;
+$light: $neutrals-paper !default;
+$success: $green-green !default;
+$warning: $yellow-yellow !default;
+
 $footer: #151414 !default;
 
 // .btn { color:#fff !important; padding: 1rem !important; line-height: 1rem !important; }
 
-// $theme-colors: (
-//   "primary":    $primary,
-//   "secondary":  $secondary,
-//   "success":    $success,
-//   "info":       $primary,
-//   "warning":    $primary,
-//   "danger":     $danger,
-//   "light":      $primary,
-//   "dark":       $dark
-// ) !default;
+$theme-colors: (
+  "primary":        $primary,
+  "secondary":      $secondary,
+  "success":        $success,
+  "info":           $info,
+  "warning":        $warning,
+  "danger":         $danger,
+  "light":          $light,
+  "dark":           $dark,
+  "primary-dark":   $primary-dark
+) !default;
 
 // Hover colors
+
 $primary-active: $blue-dark !default;
 $secondary-active: $pink-dark !default;
-$sucess-active: $green-dark !default;
 $dark-active: $grey-darker !default;
 $danger-active: $red-dark !default;
+$info-active: $teal-dark !default;
+$light-active: $neutrals-pebble !default;
+$sucess-active: $green-dark !default;
+$yellow-active: $yellow-dark !default;
 
 
 $theme-active-colors: (
 	"white":      $primary-active,   // custom color type
 	"primary":    $primary-active,
     "secondary":  $secondary-active,
-    "light":      $primary-active,
-    "success":    $sucess-active,
-    "info":       $primary-active,
-    "warning":    $primary-active,
+    "info":       $info-active,
+    "light":      $light-active,
+    "success":    $sucess-active, 
+    "warning":    $yellow-active,
     "danger":     $danger-active,
     "dark":       $dark-active
 ) !default;  // Custom variable
@@ -120,6 +130,30 @@ $theme-active-colors: (
 @function theme-active-color($key: "primary") {
     @return map-get($theme-active-colors, $key);
 }
+
+
+// $font-size-base:              1rem !default;
+// $h1-font-size:                $font-size-base * 6 !default;
+// $h2-font-size:                $font-size-base * 4.25 !default;
+// $h3-font-size:                $font-size-base * 3 !default;
+// $h4-font-size:                $font-size-base * 2.125 !default;
+// $h5-font-size:                $font-size-base * 1.5 !default;
+// $h6-font-size:                $font-size-base * 0.875 !default;
+
+
+
+$display-font-sizes: (
+  1: 6rem,
+  2: 4.25rem,
+  3: 3rem,
+  4: 2.125rem,
+  5: 1.5rem,
+  6: 0.875rem
+);
+
+$display-font-weight: 600;
+// $display-line-height: $headings-line-height;
+
 
 
 // $blue-dark: #264b94;

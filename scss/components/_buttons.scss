@@ -43,30 +43,46 @@
 // }
 
 
-@mixin button-variant-custom($background, $border, $hover-color, $color) {
-    // background-color: $btn-background;
-    // border: 2px solid $btn-border;    
+@mixin button-variant-custom($border, $hover-color, $color: #fff) {    
     border-color: $border;
     color: $color;
-
-    &:hover {
-        // border: 2px solid $btn-background;
+    
+    &:hover, &:focus {        
         background-color: $hover-color;
         border-color: $hover-color;
         color: $color;
     }
 }
 
+@mixin button-outline-variant-custom($border, $hover-color, $hover-text-color, $text-color: #fff) {    
+    border-color: $border;
+    color: $text-color;
+            
+    &:hover, &:focus {        
+        background-color: $hover-color;
+        border-color: $hover-color;
+        color: $hover-text-color;
+    }
+}
+
 
 @each $color, $value in $theme-colors {
-    .btn-#{$color} {
-        
-        @debug "color";
-
+    .btn-#{$color} {                
         $hover-color: theme-active-color($color);        
-        //$hover-color: red;
+        $text-color: if($color == 'light', #000, #fff);
+
+        @include button-variant-custom($value, $hover-color, $text-color);      
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .btn-outline-#{$color} {                
+        $hover-color: theme-active-color($color); 
+        $hover-text-color: if($color == 'light', $neutrals-granite, #fff);
+        $text-color: if($color == 'light', $neutrals-granite, $value);
+        $border: if($color == 'light', $neutrals-granite, $value);
         
-        @include button-variant-custom($value, $value, $hover-color, white);      
+        @include button-outline-variant-custom($border, $hover-color, $hover-text-color, $text-color);      
     }
 }
 

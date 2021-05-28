@@ -2,18 +2,18 @@
     $alert-border-radius: 0, 
     $alert-border-width: 4px,
     $alert-border-scale: 0%,
-    $alert-bg-scale: -80%,
+    $alert-bg-scale: -80%
 
-    $success: #2EA96C,
-    $info: #4196EB
+    // $success: #2EA96C,
+    // $info: #4196EB
 );
 
 // IMPORT THE COMPONENTS 
+@use 'components/alerts';
 @use 'components/animations';
 @use 'components/buttons';
 @use 'components/mixins';
 @use 'components/typography';
-@use 'theme/alerts';
 
 // IMPORT THE SECTIONS 
 @use 'sections/navbar';
